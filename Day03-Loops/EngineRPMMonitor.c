@@ -13,8 +13,8 @@ int main(void){
     for(i = 0; i < 10; i++){
         printf("Chu ky %d: %.2f RPM\n", i + 1, rpm[i]);
         tong = tong + rpm[i];
-        if(rpm[i] > rpm[max]){
-            rpm[max] = rpm[i];
+        if(rpm[i] > rpm_max){
+            rpm_max = rpm[i];
         }
         if(rpm[i] > 3000.0f){
             canhbao3000++;
@@ -24,7 +24,7 @@ int main(void){
             flag_rpm_cao = 1;
         }
     }
-    printf("Toc do trung binh %.2f RPM\n", tong/10);
+    printf("Toc do trung binh %.2f RPM\n", tong/(float)10);
     printf("RPM cao nhat: %.2f RPM\n", rpm_max);
     printf("So lan vuot qua 3000 = %d lan\n", canhbao3000);
 
