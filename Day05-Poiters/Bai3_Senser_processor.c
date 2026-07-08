@@ -34,7 +34,8 @@ void tim_min_max(float *arr, int n, float *min, float *max){
 }
 int main(){
     float nhiet_do[6] = {72.0f, 78.0f, 86.0f, 91.0f, 83.0f, 79.0f};
-    float gia_tri_min, gia_tri_max;
+    float gia_tri_min = 0.0f;
+    float gia_tri_max = 0.0f;
 
     tim_min_max(nhiet_do, 6, &gia_tri_min, &gia_tri_max);
     float tb = tinh_trung_binh(nhiet_do, 6);
